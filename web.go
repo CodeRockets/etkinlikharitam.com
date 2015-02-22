@@ -10,7 +10,7 @@ import (
 	"github.com/stvp/go-toml-config"
 	"io/ioutil"
 	"net/http"
-	/*	"os"*/)
+	/*"os"*/)
 
 type Handler struct {
 	DB *sqlx.DB
@@ -19,6 +19,7 @@ type Handler struct {
 func (h *Handler) GetVenues(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	params := mux.Vars(r)
+
 	dat, err := ioutil.ReadFile("sql/sel_venues.sql")
 	throwIf(err)
 	var venues []string
