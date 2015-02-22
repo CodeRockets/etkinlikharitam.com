@@ -1,1 +1,1 @@
-web: mekanci-ws
+web: etkinlikharitam.com
